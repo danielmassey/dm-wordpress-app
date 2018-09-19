@@ -305,6 +305,7 @@ function twentyseventeen_resource_hints( $urls, $relation_type ) {
 }
 add_filter( 'wp_resource_hints', 'twentyseventeen_resource_hints', 10, 2 );
 
+
 /**
  * Register widget area.
  *
@@ -584,3 +585,5 @@ require get_parent_theme_file_path( '/inc/customizer.php' );
  * SVG icons functions and filters.
  */
 require get_parent_theme_file_path( '/inc/icon-functions.php' );
+
+remove_filter('template_redirect','redirect_canonical');
